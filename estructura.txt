@@ -1,0 +1,34 @@
+/home/sergio/Proyectos/react/repaso
+├── eslint.config.js
+├── estructura.txt
+├── index.html
+├── jest.config.cjs
+├── package.json
+├── package-lock.json
+├── public
+│   ├── users.json
+│   └── vite.svg
+├── README.md
+├── src
+│   ├── app
+│   │   ├── setuptStore.ts
+│   │   └── store.ts
+│   ├── App.css
+│   ├── App.tsx
+│   ├── components
+│   │   ├── Nav.tsx
+│   │   └── Path.tsx
+│   ├── features
+│   │   ├── counter
+│   │   ├── login
+│   │   └── users
+│   ├── index.css
+│   ├── main.tsx
+│   ├── setupTests.ts
+│   └── vite-env.d.ts
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
+9 directories, 23 files
