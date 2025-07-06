@@ -1,6 +1,7 @@
-/home/sergio/Proyectos/react/repaso
+.
 ├── eslint.config.js
 ├── estructura.txt
+├── .gitignore
 ├── index.html
 ├── jest.config.cjs
 ├── package.json
@@ -11,17 +12,29 @@
 ├── README.md
 ├── src
 │   ├── app
-│   │   ├── setuptStore.ts
+│   │   ├── setupStore.ts
 │   │   └── store.ts
 │   ├── App.css
 │   ├── App.tsx
 │   ├── components
-│   │   ├── Nav.tsx
+│   │   ├── nav
+│   │   │   ├── nav.module.css
+│   │   │   └── Nav.tsx
 │   │   └── Path.tsx
 │   ├── features
 │   │   ├── counter
-│   │   ├── login
-│   │   └── users
+│   │   │   ├── counter.module.css
+│   │   │   ├── counterSlice.ts
+│   │   │   ├── counter.test.tsx
+│   │   │   └── Counter.tsx
+│   │   ├── home
+│   │   │   └── Home.tsx
+│   │   └── login
+│   │       ├── login.module.css
+│   │       ├── loginSlice.ts
+│   │       ├── login.test.tsx
+│   │       ├── Login.tsx
+│   │       └── useLogin.ts
 │   ├── index.css
 │   ├── main.tsx
 │   ├── setupTests.ts
@@ -31,4 +44,4 @@
 ├── tsconfig.node.json
 └── vite.config.ts
 
-9 directories, 23 files
+10 directories, 35 files

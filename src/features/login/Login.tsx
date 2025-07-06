@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '../../app/store';
-import { login, logout } from './LoginSlice';
+import { login, logout } from './loginSlice';
 import { useLogin } from './useLogin';
-import './Login.css';
+import styles from './login.module.css';
 
 function Login() {
   const auth = useSelector((state: RootState) => state.auth);
@@ -35,30 +35,33 @@ function Login() {
   };
 
   return (
-      <div className="login-container">
+    <div className={styles['login-container']}>
       {auth.isLoggedIn ? (
         <>
-          <p className="login-welcome">Bienvenido, {auth.userName}</p>
-          <button className="login-btn logout-btn" onClick={() => dispatch(logout())}>
+          <p className={styles['login-welcome']}>Bienvenido, {auth.userName}</p>
+          <button
+            className={`${styles['login-btn']} ${styles['logout-btn']}`}
+            onClick={() => dispatch(logout())}
+          >
             Cerrar sesión
           </button>
         </>
       ) : (
         <>
-          {error && <p className="login-error">{error}</p>}
+          {error && <p className={styles['login-error']}>{error}</p>}
 
           <input
-            className="login-input"
+            className={styles['login-input']}
             type="text"
             value={userNameInput}
             onChange={(e) => setUserNameInput(e.target.value)}
             placeholder="Ingresa tu nombre"
             required
           />
-          <button className="login-btn" onClick={handleLogin}>
+          <button className={styles['login-btn']} onClick={handleLogin}>
             Login
           </button>
-          {loginError && <p className="login-error">{loginError}</p>}
+          {loginError && <p className={styles['login-error']}>{loginError}</p>}
         </>
       )}
     </div>

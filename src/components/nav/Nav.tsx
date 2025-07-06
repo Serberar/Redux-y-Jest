@@ -1,18 +1,45 @@
 import { NavLink } from 'react-router-dom';
-import './Nav.css';
+import styles from './nav.module.css';
 
 const Nav = () => {
   return (
-    <nav className="nav-container">
-      <ul className="nav-list">
-        <li className="nav-item">
-          <NavLink to="/" className="nav-link">Inicio</NavLink>
+    <nav className={styles['nav-container']}>
+      <ul className={styles['nav-list']}>
+        <li className={styles['nav-item']}>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? `${styles['nav-link']} ${styles.active}`
+                : styles['nav-link']
+            }
+          >
+            Inicio
+          </NavLink>
         </li>
-        <li className="nav-item">
-          <NavLink to="/counter" className="nav-link">Contador</NavLink>
+        <li className={styles['nav-item']}>
+          <NavLink
+            to="/counter"
+            className={({ isActive }) =>
+              isActive
+                ? `${styles['nav-link']} ${styles.active}`
+                : styles['nav-link']
+            }
+          >
+            Contador
+          </NavLink>
         </li>
-        <li className="nav-item">
-          <NavLink to="/login" className="nav-link">Login</NavLink>
+        <li className={styles['nav-item']}>
+          <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              isActive
+                ? `${styles['nav-link']} ${styles.active}`
+                : styles['nav-link']
+            }
+          >
+            Login
+          </NavLink>
         </li>
       </ul>
     </nav>
